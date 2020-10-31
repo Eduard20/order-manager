@@ -8,7 +8,7 @@ const { OrderManager } = require("./order-manager");
       manager.processOrder(order);
     }
     console.log(manager.executedOrders);
-    console.log(manager.ordersBook);
+    console.log(manager.orders);
   } catch (err) {
     console.error(err);
   }

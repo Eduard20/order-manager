@@ -1,7 +1,7 @@
 class OrderManager {
   constructor() {
     this.ORDER_TYPES = ['buy', 'sell'];
-    this.orders = [];
+    this._orders = [];
     this._executedOrders = [];
   }
 
@@ -62,15 +62,15 @@ class OrderManager {
   }
 
   add(order) {
-    return this.orders.push(order);
+    return this._orders.push(order);
   }
 
   update(id, order) {
-    return this.orders[id] = order;
+    return this._orders[id] = order;
   }
 
   remove(id) {
-    this.orders.splice(id, 1);
+    this._orders.splice(id, 1);
   }
 
   closeOrder(order) {
@@ -81,8 +81,8 @@ class OrderManager {
     return this._executedOrders.map(({ id, ...other }) => other);
   }
 
-  get ordersBook() {
-    return this.orders;
+  get orders() {
+    return this._orders;
   }
 }
 
