@@ -1,5 +1,5 @@
 const orderBook = require("../orders.json");
-const { OrderManager } = require("../order-manager-2");
+const { OrderManager } = require("../order-manager");
 
 describe("OrderManager - class", () => {
   test("it should return proper values", () => {
