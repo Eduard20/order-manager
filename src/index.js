@@ -1,4 +1,4 @@
-const orderBook = require("./orders.json");
+const orderBook = require("../orders.json");
 const { OrderManager } = require("./order-manager");
 
 (async () => {
